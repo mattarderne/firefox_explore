@@ -28,6 +28,7 @@ pwd is
 
 
 # To do
+[ ] figure out your most clicked HN titles, look at the words in the title
 [ ] create an automated Docker
 [ ] figure out procrastinate list 
 [ ] name - true-to-thine-fox
