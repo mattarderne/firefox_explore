@@ -88,9 +88,7 @@ SELECT
     visited_year,
     visited_today,
     visited_year || ' ' || visited_month as visited_year_month_long,
-    visited_year_month_short,
-    procrastinate.procrastinate
+    visited_year_month_short
 FROM cleanup
-LEFT JOIN procrastinate on cleanup.top_level_domain = procrastinate.procrastinate
 
 
