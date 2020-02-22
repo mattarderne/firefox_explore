@@ -55,11 +55,13 @@ admin11
 Contributions useful, the following are necessary at some stage, but other useful things include creating useful visualisations (kinda tricky to integrate as the code lives in the metabase.db), cleaning up the `all_site_visits.sql` file 
 
 ## Small
+* [ ] figure out your most clicked HN titles, look at the words in the title
 * [ ] Name it something clever - `true-to-thine-fox`
 * [ ] Fix the dates in the base [Base SQL table](http://localhost:3000/question/33)
 * [ ] Fix the Docker to use docker-compose
 * [ ] Mount the `places.sqlite` directly in the docker rather than copying it to the repo 
 * [ ] think about doing a integer join on the `all_site_visits` table on the `LEFT JOIN procrastinate on cleanup.top_level_domain = procrastinate.procrastinate` join
+
 
 ## Big
 * [ ] Add the [procrastinate](/procrastinate.csv) list to the SQLite db somehow
@@ -67,3 +69,10 @@ Contributions useful, the following are necessary at some stage, but other usefu
     * [ ] [ai on docker](https://github.com/zacheberhart/Learning-to-Feel)
     * [ ] streamlit [docker](https://medium.com/@ansjin/how-to-create-and-deploy-data-exploration-web-app-easily-using-python-a03c4b8a1f3e)
 * [ ] find some other sqlite data sources and add them 
+
+
+
+
+
+
+
