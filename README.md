@@ -11,13 +11,15 @@ Explore your firefox browsing history trends using Metabase Analytics Tool
 
 # Setup
 
-Copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it...)
+Clone this repo, copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it...)
 
 ```bash
+git clone https://github.com/mattarderne/firefox_explore.git
+cd firefox_explore
 cp ~/Library/ApplicationSupport/Firefox/Profiles/y4pw28fm.default/places.sqlite .
 ```
 
-This creates a docker container, linking this repo (with the Metabase backend sqlite database and the Firefox places.sqlite) to the Docker container
+The below creates a docker container, linking this repo (with the Metabase backend sqlite database and the Firefox places.sqlite) to the Docker container
 
 ```bash
 docker run -d -p 3000:3000 \
@@ -29,8 +31,6 @@ docker run -d -p 3000:3000 \
 ```bash
 docker start metabase_ff
 ```
-
-
 
 # Use 
 ## Links
@@ -57,14 +57,13 @@ Contributions useful, the following are necessary at some stage, but other usefu
 ## Small
 * [ ] figure out your most clicked HN titles, look at the words in the title
 * [ ] Name it something clever - `true-to-thine-fox`
-* [ ] Fix the dates in the base [Base SQL table](http://localhost:3000/question/33)
 * [ ] Fix the Docker to use docker-compose
-* [ ] Mount the `places.sqlite` directly in the docker rather than copying it to the repo 
+* [ ] Mount the `places.sqlite` directly in place rather than copying it to the repo 
 * [ ] think about doing a integer join on the `all_site_visits` table on the `LEFT JOIN procrastinate on cleanup.top_level_domain = procrastinate.procrastinate` join
 
 
 ## Big
-* [ ] Add the [procrastinate](/procrastinate.csv) list to the SQLite db somehow
+* [ ] Fix the dates in the base [Base SQL table](http://localhost:3000/question/33)
 * [ ] python, add some deep learning correlation graphs, jupyter notebooks, streamlit
     * [ ] [ai on docker](https://github.com/zacheberhart/Learning-to-Feel)
     * [ ] streamlit [docker](https://medium.com/@ansjin/how-to-create-and-deploy-data-exploration-web-app-easily-using-python-a03c4b8a1f3e)
