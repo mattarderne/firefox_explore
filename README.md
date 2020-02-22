@@ -34,7 +34,7 @@ docker start metabase_ff
 
 # Use 
 ## Links
-* [Browsing Overview](localhost:3000/dashboard/1), use these as inspiration for starting points
+* [Browsing Overview](http://localhost:3000/dashboard/1), use these as inspiration for starting points
 * [Base SQL table](http://localhost:3000/question/33), use this as a basis for queries
 
 Login details are:
