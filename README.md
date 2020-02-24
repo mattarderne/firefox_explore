@@ -16,7 +16,7 @@ Clone this repo
 git clone https://github.com/mattarderne/firefox_explore.git
 cd firefox_explore
 ```
-Copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it...)
+Copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it... (it is added to `.gitignore`)
 ```bash
 cp ~/Library/ApplicationSupport/Firefox/Profiles/y4pw28fm.default/places.sqlite .
 ```
