@@ -6,16 +6,18 @@ Explore your firefox browsing history trends using Metabase Analytics Tool
 
 ![image](/firefox.png)
 
-> Disclaimer - this was made in a rush, and sat on ice for a while, please PR any suggestions. 
+> Disclaimer - this was made in a rush, and sat on ice for a while, please PR any suggestions & glaring oversights. 
 
 
 # Setup
 
-Clone this repo, copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it...)
-
+Clone this repo
 ```bash
 git clone https://github.com/mattarderne/firefox_explore.git
 cd firefox_explore
+```
+Copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github, it's got a lot in it...)
+```bash
 cp ~/Library/ApplicationSupport/Firefox/Profiles/y4pw28fm.default/places.sqlite .
 ```
 
@@ -34,8 +36,8 @@ docker start metabase_ff
 
 # Use 
 ## Links
-* [Browsing Overview](http://localhost:3000/dashboard/1), use these as inspiration for starting points
-* [Base SQL table](http://localhost:3000/question/33), use this as a basis for queries
+* [Browsing Overview](http://localhost:3000/dashboard/1), use these as a starting point
+* [Base SQL table](http://localhost:3000/question/33), use this as a base for new queries
 
 Login details are:
 
@@ -46,7 +48,9 @@ admin11
 
 ## Procrastinate
 
-1. Modify the `procrastinate.csv` file with the domains you want to include, you [this](http://localhost:3000/question/37) question to get your top 20 list.
+This allows you to define a "bad list" of sites that you'd like to mark specifically (or use as a way to insert custom data into the sqlite db)
+
+1. Modify the `procrastinate.csv` file with the domains you want to include, use [this](http://localhost:3000/question/37) question to get your top 20 list.
 2. Install sqlite with `pip install procrastinate/requirements.txt`
 3. Run `python procrastinate/procrastinate.py` to copy the lists to the `procrastinate.db`
 
