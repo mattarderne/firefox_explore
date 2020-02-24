@@ -36,7 +36,7 @@ docker start metabase_ff
 
 # Use 
 ## Links
-* [Browsing Overview](http://localhost:3000/dashboard/1), use these as a starting point
+* [Browsing Overview](http://localhost:3000/dashboard/1), use as a starting point
 * [Base SQL table](http://localhost:3000/question/33), use this as a base for new queries
 
 Login details are:
@@ -45,6 +45,8 @@ Login details are:
 admin@admin.admin
 admin11
 ```
+
+The dashboards sometimes need to be refreshed after their first run if any questions don't load
 
 ## Procrastinate
 
@@ -62,8 +64,9 @@ Contributions useful, the following are necessary at some stage, but other usefu
 * [ ] figure out your most clicked HN titles, look at the words in the title
 * [ ] Name it something clever - `true-to-thine-fox`
 * [ ] Fix the Docker to use docker-compose
-* [ ] Mount the `places.sqlite` directly in place rather than copying it to the repo 
-* [ ] think about doing a integer join on the `all_site_visits` table on the `LEFT JOIN procrastinate on cleanup.top_level_domain = procrastinate.procrastinate` join
+* [ ] Mount the `places.sqlite` directly in place rather than copying it to the repo
+* [ ] Find a better way of doing `procrastinate_base` 
+* [ ] think about doing an integer join on the `all_site_visits` table on the `LEFT JOIN procrastinate on cleanup.top_level_domain = procrastinate.procrastinate` join
 
 
 ## Big
