@@ -2,7 +2,7 @@
 
 _be-true-to-thine-fox_
 
-Explore your firefox browsing history trends using [Metabase](https://www.metabase.com/), the open source analytics tool
+Explore your firefox browsing history trends using [Metabase](https://www.metabase.com/), an [open source analytics tool](https://github.com/metabase/metabase)
 
 ![image](/firefox.png)
 
