@@ -16,7 +16,9 @@ Clone this repo
 git clone https://github.com/mattarderne/firefox_explore.git
 cd firefox_explore
 ```
-Copy your firefox profile to this repo (NB - make sure not to commit your `places.sqlite` file or any `places.*` to github (it is added to `.gitignore`)
+
+Find where your Firefox `places.sqlite` file lives in [about:support](about:support) page under the **Profile Folder** entry and copy here.
+
 ```bash
 cp ~/Library/ApplicationSupport/Firefox/Profiles/y4pw28fm.default/places.sqlite .
 ```
@@ -30,14 +32,12 @@ docker run -d -p 3000:3000 \
 --name metabase_ff metabase/metabase
 ```
 
+Run below and 2-3min later Metabase will be running at [http://localhost:3000](http://localhost:3000/dashboard/1)
 ```bash
 docker start metabase_ff
 ```
 
 # Use 
-## Links
-* [Browsing Overview](http://localhost:3000/dashboard/1), use as a starting point
-* [Base SQL table](http://localhost:3000/question/33), use this as a base for new queries
 
 Login details are:
 
@@ -46,15 +46,19 @@ admin@admin.admin
 admin11
 ```
 
+
+## Links
+* [Browsing Overview](http://localhost:3000/dashboard/1), use as a starting point
+* [Base SQL table](http://localhost:3000/question/33), use this as a base for new queries
+
 The dashboards sometimes need to be refreshed after their first run if any questions don't load
 
 ## Procrastinate
 
 This allows you to define a "bad list" of sites that you'd like to mark specifically (or use as a way to insert custom data into the sqlite db)
 
-1. Modify the `procrastinate.csv` file with the domains you want to include, use [this](http://localhost:3000/question/37) question to get your top 20 list.
-2. Install sqlite with `pip install procrastinate/requirements.txt`
-3. Run `python procrastinate/procrastinate.py` to copy the lists to the `procrastinate.db`
+1. Modify the `site_list` in `procrastinate.py` with the domains you want to include, use [this](http://localhost:3000/question/37) question to get your top 20 list.
+2. Run `python procrastinate.py` to copy the lists to the `places.sqlite`
 
 # TODO
 
