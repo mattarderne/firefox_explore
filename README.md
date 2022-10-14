@@ -10,6 +10,8 @@ Disclaimer - this was made in a rush, and sat on ice for a while, please PR any 
 
 Background reading on the [Firefox ERD](https://gist.github.com/turboBasic/0f1e770dae28b529470da2a98b245a46) can be found in the rather sparse [Firefox docs](https://wiki.mozilla.org/Places)
 
+![image](https://user-images.githubusercontent.com/23472325/195833395-bc3d5872-cbef-425d-92e7-e42ff3fecf88.png)
+
 # Setup
 
 Clone this repo
