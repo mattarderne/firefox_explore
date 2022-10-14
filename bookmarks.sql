@@ -2,9 +2,13 @@
 -- Usage: 
 --  copy your places.sqlite file from your Firefox profile into a new location, and open it with a SQL tool eg https://tableplus.com/
 --  open places.sqlite and run the below query, export that to CSV and you have freed yourself form the dead fox
+--  use https://github.com/Arrowyz01/csv2logseq_block to conver the CSV into MD, and wrangle the result into something usable
+
+-- NB: modify the 'parent_folder' line to suit
 
 
-with bookmarks as (
+with 
+bookmarks as (
 	select parents.title as parent_folder,
 		b.*, 
 		 datetime(datetime(b.dateadded/1000000,'unixepoch'), '+60 minute') as last_visit_date,
@@ -40,6 +44,7 @@ stage as (
 		-- change which link type you want by varying these two comments
 		-- '#' || replace(bookmarks.parent_folder, ' ', '') as parent_folder, 
 		'[[' || replace(bookmarks.parent_folder, ' ', '') || ']]' as parent_folder, 
+-- 		replace(bookmarks.parent_folder, ' ', '') as parent_folder, 
 		
 		bookmarks.title as titles,
 		places.title,
@@ -72,8 +77,8 @@ names_group as (
        
  final as (
  	select distinct
-	 	names_group.place_id, 
 	 	names_group.tags,
+	 	names_group.place_id, 
 	 	names_group.last_visit_date,
 	 	title, 
 	 	url,
