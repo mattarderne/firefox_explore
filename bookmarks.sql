@@ -1,4 +1,8 @@
-#### Export your Firefox bookmarks into a reasonable format to import into Roam/Obsidian/Logseq
+-- Export your Firefox bookmarks into a reasonable format to import into Roam/Obsidian/Logseq
+-- Usage: 
+--  copy your places.sqlite file from your Firefox profile into a new location, and open it with a SQL tool eg https://tableplus.com/
+--  open places.sqlite and run the below query, export that to CSV and you have freed yourself form the dead fox
+
 
 with bookmarks as (
 	select parents.title as parent_folder,
