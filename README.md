@@ -6,7 +6,7 @@ Explore your firefox browsing history trends using [Metabase](https://www.metaba
 
 ![image](/firefox.png)
 
-> Disclaimer - this was made in a rush, and sat on ice for a while, please PR any suggestions & glaring oversights. 
+Disclaimer - this was made in a rush, and sat on ice for a while, please PR any suggestions & glaring oversights. 
 
 Background reading on the [Firefox ERD](https://gist.github.com/turboBasic/0f1e770dae28b529470da2a98b245a46) can be found in the rather sparse [Firefox docs](https://wiki.mozilla.org/Places)
 
